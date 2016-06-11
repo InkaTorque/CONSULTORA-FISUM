@@ -35,6 +35,7 @@ El usuario debe estar previamente registrado en el sistema con sus datos persona
 5.1 Visualizacion de panel para la gestion de laboratorios:
 Permite visualizar los laboratorios con su estado.
 
-5.14 Visualizacion de Opcion de Apertura:
-Permite visualizar la opcion para la apertura de nuevos laboratorios
+5.14 Visualizacion de Docentes:
+Permite visualizar los que ha acontecido con respecto a los laboratorios en la ultimas horas.
+
 
