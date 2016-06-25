@@ -1,0 +1,17 @@
+<div class="col-md-12" ng-controller="FbcreatorCtrl">
+    <form class="creator">
+        <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="string" class="form-control" id="name" ng-model="fbapp.name" placeholder="Nombre">
+        </div>
+        <div class="form-group">
+            <label for="app_id">app_id</label>
+            <input type="string" class="form-control" id="app_id" ng-model="fbapp.app_id" placeholder="App id">
+        </div>
+        <div class="form-group">
+            <label for="description">App .zip</label>
+            <input type="file" id="description" ng-model="fbapp.file" ng-file-select/>
+        </div>
+        <button type="submit" class="btn btn-primary" ng-click="FbApps.Create(fbapp)">Subir</button>
+    </form>
+</div>

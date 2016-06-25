@@ -1,0 +1,29 @@
+angular.module('dokin').controller('DokinhistoryCtrl',function($scope,Visitor){
+
+    $scope.History={
+        list:[],
+        open_chat:false,
+        openChat:function(client){
+            this.open_chat=true;
+            var that=this;
+            Visitor.findOne({
+                filter:{
+                    where:{
+                        id:client.id
+                    },
+                    include:"chats"
+                }
+            },function(res){
+                that.userinfo=res;
+                that.actual_chat=res.chats[res.chats.length-1];
+                console.log(that.actual_chat);
+            })
+        },
+        closeInfo:function(){
+            this.open_chat=false;
+        }
+    };
+    Visitor.find(function(res){
+        $scope.History.list=res;
+    });
+});

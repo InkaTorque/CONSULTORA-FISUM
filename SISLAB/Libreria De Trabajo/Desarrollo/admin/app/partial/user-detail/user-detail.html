@@ -1,0 +1,74 @@
+<div ng-controller="UserDetailCtrl">
+
+    <div class="title_partial">
+        <div class="data_user">
+            <img ng-src="{{order.data.user.picture || 'images/persona.png'}}" alt=""/>
+
+            <div class="du_name">
+                <h3>{{order.data.user.firstName}} {{order.data.user.lastName}}</h3>
+
+                <p>Email: <strong>{{order.data.user.email}}</strong></p>
+
+                <p>DNI: <strong>{{order.data.user.dni}}</strong></p>
+
+                <div class="dun_state">
+                    <p class="dus_p">Estado del pedido: </p>
+
+                    <div class="dus_edit">
+                        <div class="dus_desact" ng-show="!edit_status">
+                            <strong style="text-transform: uppercase">
+                                <span ng-show="order.data.status=='PENDING'">Pendiente</span>
+                                <span ng-show="order.data.status=='PAID'">Pagado</span>
+                                <span ng-show="order.data.status=='DISPATCHED'">Enviado</span>
+                                <span ng-show="order.data.status=='RETURNED'">Devuelto</span>
+                            </strong>
+
+                            <div class="ad_btn blue" ng-click="edit_status=true">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                            </div>
+                        </div>
+                        <div class="dus_activ" ng-show="edit_status">
+                            <select name="status" ng-model="order_status">
+                                <option ng-repeat="item in list_status" value="{{item.value}}">{{item.name}}</option>
+                            </select>
+
+                            <div class="dua_btn">
+                                <div class="ad_btn blue" ng-click="order.edit_status()">
+                                    <span class="glyphicon glyphicon-ok"></span>
+                                </div>
+                                <div class="ad_btn red" ng-click="edit_status=false">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="order_content">
+        <div class="bs-example" data-example-id="contextual-table">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nombre y apellidos</th>
+                    <th>Email</th>
+                    <th>Estado</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-click="orders.show_detail(item.id)" ng-repeat="item in orders.data">
+                    <th scope="row">{{$index+1}}</th>
+                    <td>{{item.user.firstName}} {{item.user.lastName}}</td>
+                    <td>{{item.user.email}}</td>
+                    <td style="text-transform: uppercase">{{item.status}}</td>
+                </tr>
+                <tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>

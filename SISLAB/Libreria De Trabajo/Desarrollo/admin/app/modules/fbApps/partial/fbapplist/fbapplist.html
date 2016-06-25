@@ -1,0 +1,10 @@
+<div class="col-md-12 fbappslist" ng-controller="FbapplistCtrl">
+    <div class="fbapp create" ui-sref="fbcreator">
+        <a href="" ><img src="assets/images/fbapp.png" alt=""/> <span>Crear Nuevo</span></a>
+    </div>
+    <div class="fbapp" ng-repeat="fbapp in Fbapplist.list" ng-click="Fbapplist.Goapp(fbapp)">
+        <div>
+            <img src="assets/images/fbapp.png" alt=""/> <span>{{fbapp.name}}</span>
+        </div>
+    </div>
+</div>

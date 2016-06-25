@@ -1,0 +1,18 @@
+.dokinagents{
+
+    .btn-default{
+        border-radius: 14px;
+        background-color: rgb(96, 169, 202);
+        color: white;
+        border: none;
+        font-size: 12px;
+        margin-left: 37px;
+        display: inline-block;
+    }
+    tr{
+        cursor: pointer;
+        &:hover{
+            background: whitesmoke;
+        }
+    }
+}

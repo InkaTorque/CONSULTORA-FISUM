@@ -1,0 +1,38 @@
+<div ng-controller="UserCtrl">
+
+    <div class="title_partial">
+        <div class="tp_buttons">
+            <div class="btn_blue btn w-xs btn-info">Crear</div>
+        </div>
+        <h3>Usuarios</h3>
+    </div>
+
+    <div class="order_content">
+        <div class="cu_search">
+            <span class="glyphicon glyphicon-search"></span>
+            <input type="text" class="form-control" ng-model="search_email" placeholder="Buscar por Email"/>
+        </div>
+        <div class="bs-example" data-example-id="contextual-table">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nombre y apellidos</th>
+                    <th>Email</th>
+                    <th>Telefono</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="item in users.data | filter:search_email" ng-click="users.go_orders(item)">
+                    <th scope="row">{{$index+1}}</th>
+                    <td>{{item.firstName}} {{item.lastName}}</td>
+                    <td>{{item.email}}</td>
+                    <td>{{item.phone}}</td>
+                </tr>
+                <tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>

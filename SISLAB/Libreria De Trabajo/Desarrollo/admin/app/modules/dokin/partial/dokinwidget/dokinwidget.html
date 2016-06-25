@@ -1,0 +1,127 @@
+<div class="ac_variable" ng-controller="DokinwidgetCtrl">
+    <div class="col-md-12 dokinwidget dokin dokinaccount">
+
+        <div class="col-md-6">
+            <div>
+                <div class="btn-group head" role="group" aria-label="...">
+                    <button type="button" class="btn btn-default" ng-click="tab='code'" ng-init="tab='code'">Comienza</button>
+                    <button type="button" class="btn btn-default" ng-click="tab='appearance'">Apariencia</button>
+                    <button type="button" class="btn btn-default" ng-click="tab='other'">Otros</button>
+                </div>
+            </div>
+            <div>
+                <hr/>
+            </div>
+            <div ng-switch="tab">
+                <div class="col-md-12" ng-show="tab=='code'">
+                    <h5>Inserte el live Chat widget dentro de su sitio</h5>
+                    <p>
+                        Copie y pegue el siguiente script en el codigo fuente de su sitio web entre los tags <strong>&lt;head&gt; &lt;/head&gt;</strong>
+                    </p>
+                    <textarea name="" id="code" cols="30"  rows="10" ></textarea>
+                </div>
+                <div class="col-md-6" ng-show="tab=='appearance'">
+                    <form>
+                        <div class="wgroup">
+                            <h4>1.- Ventana de Chat</h4>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Titulo de cabecera</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                       placeholder="Titulo de Cabecera">
+                            </div>
+                            <div class="form-group">
+                                <label for="themecolor">Color del Tema</label>
+                                <input colorpicker class="form-control" id="themecolor" placeholder="Color del Tema" colorpicker-with-input="true" type="text" ng-model="your_model" />
+                            </div>
+                            <div class="form-group">
+                                <label for="themecolor">Posición del widget</label>
+                            </div>
+                        </div>
+                        <div class="wgroup">
+                            <h4>2.- Burbuja de Chat</h4>
+
+                            <div class="form-group">
+                                <label for="bb_bg_color">Color de Fondo</label>
+                                <input type="text" class="form-control" id="bb_bg_color" placeholder="Color de fondo">
+                            </div>
+                            <div class="form-group">
+                                <label for="bb_title">Titulo</label>
+                                <input type="text" class="form-control" id="bb_title" placeholder="Titulo">
+                            </div>
+                            <div class="form-group">
+                                <label for="bb_text">Texto</label>
+                                <input type="text" class="form-control" id="bb_text" placeholder="Texto">
+                            </div>
+                        </div>
+                        <div class="wgroup">
+                            <h4>3.- Mensajes</h4>
+
+                            <div class="form-group">
+                                <label for="online_message">Online</label>
+                                <input type="text" class="form-control" id="online_message" placeholder="online">
+                            </div>
+                            <div class="form-group">
+                                <label for="offline_message">Online</label>
+                                <input type="text" class="form-control" id="offline_message" placeholder="offline">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6" ng-show="tab=='other'">
+                    <form>
+                        <div class="wgroup">
+                            <h4>1.- Ventana de Chat</h4>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Titulo de cabecera</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                       placeholder="Titulo de Cabecera">
+                            </div>
+                            <div class="form-group">
+                                <label for="themecolor">Color del Tema</label>
+                                <input colorpicker class="form-control" id="themecolor" placeholder="Color del Tema" colorpicker-with-input="true" type="text" ng-model="your_model" />
+                            </div>
+                            <div class="form-group">
+                                <label for="themecolor">Posición del widget</label>
+                            </div>
+                        </div>
+                        <div class="wgroup">
+                            <h4>2.- Burbuja de Chat</h4>
+
+                            <div class="form-group">
+                                <label for="bb_bg_color">Color de Fondo</label>
+                                <input type="text" class="form-control" id="bb_bg_color" placeholder="Color de fondo">
+                            </div>
+                            <div class="form-group">
+                                <label for="bb_title">Titulo</label>
+                                <input type="text" class="form-control" id="bb_title" placeholder="Titulo">
+                            </div>
+                            <div class="form-group">
+                                <label for="bb_text">Texto</label>
+                                <input type="text" class="form-control" id="bb_text" placeholder="Texto">
+                            </div>
+                        </div>
+                        <div class="wgroup">
+                            <h4>3.- Mensajes</h4>
+
+                            <div class="form-group">
+                                <label for="online_message">Online</label>
+                                <input type="text" class="form-control" id="online_message" placeholder="online">
+                            </div>
+                            <div class="form-group">
+                                <label for="offline_message">Online</label>
+                                <input type="text" class="form-control" id="offline_message" placeholder="offline">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 relative">
+            <div class="wrap-widget">
+                <div id="dokin-widget">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

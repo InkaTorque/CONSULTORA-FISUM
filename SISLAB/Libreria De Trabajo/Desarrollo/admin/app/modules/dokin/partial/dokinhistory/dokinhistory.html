@@ -1,0 +1,65 @@
+<div class="ac_variable">
+    <div class="col-md-12 nopad dokinvisitor dokin dokinhistory" ng-controller="DokinhistoryCtrl">
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Buscar">
+                    </div>
+                </form>
+            </div>
+            <!-- Table -->
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Agente</th>
+                        <th>Raiting</th>
+                        <th>Fecha</th>
+                        <th>Ultimo Mensaje</th>
+                    </tr>
+                </thead>
+            </table>
+            <!-- Table -->
+            <table class="table">
+                <tbody>
+                    <tr ng-repeat="visitor in History.list" ng-click="History.openChat(visitor)">
+                        <th>#{{visitor.id.toString()}}</th>
+                        <th>true</th>
+                        <th>#{{visitor.viewing}}</th>
+                        <th>#{{visitor.historial}}</th>
+                        <th>
+                            <p class="bubble">
+                                {{visitor.lastMessage}}
+                            </p>
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="more-chat col-md-8" ng-if="History.open_chat">
+                <div class="head">
+                    <div class="btn-group btn-group-chat" role="group">
+                        <button type="button" class="btn btn-default">User Info</button>
+                        <button type="button" class="btn btn-default">Chat</button>
+                    </div>
+                    <div class="pull-right">
+                        <i class="fa fa-times-circle-o fa-2x" ng-click="History.closeInfo()"></i>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div class="conversation">
+                            <div ng-repeat="con in History.actual_chat.thread" class="conv">
+                                <div class="user" ng-if="History.actual_chat.thread[$index-1].user.firstName!=con.user.firstName">
+                                    <p ng-bind="con.user.firstName||'Anonimo'"></p>
+                                </div>
+                                <div class="message" ng-bind="con.text"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

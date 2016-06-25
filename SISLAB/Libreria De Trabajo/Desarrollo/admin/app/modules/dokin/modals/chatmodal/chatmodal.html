@@ -1,0 +1,97 @@
+<div class="dokin">
+	<div class="modal-header">
+        <i type="button" class="fa fa-times-circle-o pull-right" ng-click="$dismiss()" aria-hidden="true"></i>
+        <i type="button" class="fa fa-minus-square-o pull-right" ng-click="$dismiss()" aria-hidden="true"></i>
+		<h4 class="modal-title"><i class="fa fa-weixin"></i> <span>Visitante</span></h4>
+	</div>
+	<div class="modal-body">
+		<div class="col-md-9">
+            <div class="conversation" id="dk-scroll">
+                <div ng-repeat="con in Chat.conversation" class="conv">
+                    <div class="user" ng-if="Chat.conversation[$index-1].user.firstName!=con.user.firstName"><p ng-bind="con.user.firstName||'Anonimo'"></p></div>
+                    <div class="message" ng-bind="con.text"></div>
+										<div class="" ng-if="$last">
+											<div class="" ng-init="Chat.scrollDown()">												
+											</div>
+										</div>
+                </div>
+            </div>
+            <div >
+                <textarea name=""  ng-model="Chat.message" ng-keyup="Chat.send($event)" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+		<div class="col-md-3">
+            <div class="visitor-info">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <form>
+                            <div class="form-group">
+                                <div class="col-md-3">
+                                    <i class="fa fa-user fa-3x"></i>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nombre">
+                                    <input type="text" class="form-control" id="lastname" placeholder="Apellidos">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <input type="email" class="form-control col-md-12" id="exampleInputEmail1" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <label for="exampleInputEmail1" >Nota:</label>
+                                    <textarea class="col-md-12" name="" id="" cols="10" rows="2"></textarea>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="panel panel-default panel-desc">
+                    <div class="panel-body">
+                        <div class="btn-group col-md-12 description" role="group" aria-label="...">
+                            <button type="button" class="btn btn-default col-md-4">
+                                <span class="badge">4</span>
+                                <p>PAST VISITS</p>
+                            </button>
+                            <button type="button" class="btn btn-default col-md-4">
+                                <span class="badge">4</span>
+                                <p>PAST CHATS</p>
+                            </button>
+                            <button type="button" class="btn btn-default col-md-4">
+                                <span class="badge">4</span>
+                                <p>ONLINE</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default device">
+                    <div class="panel-heading">Dispositivo</div>
+                    <div class="panel-body">
+                        <div class="item">
+                            <span>Ubicacion</span>
+                            <p><i class="fa fa-long-arrow-right"></i> <span ng-bind="Chat.client.location.country_name"></span></p>
+                        </div>
+                        <div class="item">
+                            <span>Browser</span>
+                            <p><i class="fa fa-long-arrow-right"></i><span ng-bind="Chat.client.browser"></span></p>
+                        </div>
+                        <div class="item">
+                            <span>Plataforma</span>
+                            <p><i class="fa fa-long-arrow-right"></i> <span ng-bind="Chat.client.device"></span></p>
+                        </div>
+                        <div class="item">
+                            <span>User Agent</span>
+                            <p><i class="fa fa-long-arrow-right"></i> <span ng-bind="Chat.client.userAgent"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+	<div class="modal-footer">
+        <!--<button class="btn btn-default" ng-click="$dismiss()">Cancel</button>-->
+		<!--<button type="button" class="btn btn-primary">Save changes</button>-->
+	</div>
+</div>

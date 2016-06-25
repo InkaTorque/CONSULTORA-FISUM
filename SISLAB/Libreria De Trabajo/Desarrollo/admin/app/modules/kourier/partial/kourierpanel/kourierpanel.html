@@ -1,0 +1,35 @@
+<div class="col-md-12 dokin dk-panel" ng-controller="KourierpanelCtrl">
+    <div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="logo">
+                    <img src="assets/dokin/images/kodevian.png" alt=""/>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <!-- Single button -->
+                <div class="btn-group status" dropdown is-open="status.isopen">
+                    <button type="button" class="btn btn-inverse dropdown-toggle" dropdown-toggle ng-disabled="disabled">
+                        Estatus <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#"><i class="fa fa-circle online"></i> Online</a></li>
+                        <li><a href="#"><i class="fa fa-circle away"></i> Away</a></li>
+                        <li><a href="#"><i class="fa fa-circle invis"></i> Invisible</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <div>
+            <ul class="list-group">
+                <li class="list-group-item" ui-sref-active="active" ui-sref="kourier.home"><i class="fa fa-home"></i> Home</li>
+                <li class="list-group-item" ui-sref-active="active" ui-sref="kourier.mlist"><i class="fa fa-home"></i> Mail List</li>
+                <li class="list-group-item" ui-sref-active="active" ui-sref="kourier.report"><i class="fa fa-user"></i> Reportes</li>
+                <li class="list-group-item" ui-sref-active="active" ui-sref="kourier.campaign"><i class="fa fa-pie-chart"></i> Campañas</li>
+                <!--<li class="list-group-item" ui-sref-active="active" ui-sref="dokin.benefits"><i class="fa fa-trophy"></i> Beneficios</li>-->
+            </ul>
+        </div>
+    </div>
+</div>

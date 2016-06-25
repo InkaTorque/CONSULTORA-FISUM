@@ -1,0 +1,46 @@
+<div class="ac_variable" ng-controller="DokinvisitorCtrl">
+    <div class="col-md-12 nopad dokinvisitor dokin">
+
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Buscar">
+                    </div>
+                </form>
+            </div>
+            <!-- Table -->
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Visitante</th>
+                    <th>Online</th>
+                    <th>Viendo</th>
+                    <th>Referido</th>
+                    <th>Visitas</th>
+                </tr>
+                </thead>
+            </table>
+            <!-- Table -->
+            <div class="filter"><i class="fa fa-filter"></i> Activos</div>
+            <table class="table">
+                <tbody>
+                <tr ng-repeat="visitor in Visitor.list" ng-click="Visitor.openChat(visitor)">
+                    <th>#{{visitor.id.toString()}}</th>
+                    <th>true</th>
+                    <th>#{{visitor.viewing}}</th>
+                    <th>#{{visitor.historial}}</th>
+                    <th>#{{visitor.visits}}</th>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="minimized-chat">
+            <div ng-repeat="min in Visitor.minimized track by $index" class="chat">
+                <div ng-click="Visitor.openChat(min)"><a href="" >{{min.id}}</a></div>
+                <i class="fa fa-times" ng-click="Visitor.alertClose(min,$index)"></i>
+            </div>
+        </div>
+    </div>
+</div>

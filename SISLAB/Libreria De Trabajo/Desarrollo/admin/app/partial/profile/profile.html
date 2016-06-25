@@ -1,0 +1,53 @@
+<div ng-controller="ProfileCtrl">
+
+    <div class="title_partial">
+        <div class="tp_buttons">
+            <div class="btn_blue btn w-xs btn-info">Editar</div>
+        </div>
+        <h3>Perfil</h3>
+    </div>
+
+    <div class="profile">
+        <form>
+            <h3>Datos generales</h3>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Nombres</label>
+                <input type="text" class="form-control" id="exampleInputFirstName" ng-model="user.firstName" placeholder="Nombre">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Apellidos</label>
+                <input type="text" class="form-control" id="exampleInputLastName" ng-model="user.lastName" placeholder="Apellidos">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" ng-model="user.email" placeholder="Ingrese email">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPhone">Telefono</label>
+                <input type="text" class="form-control" id="exampleInputPhone" ng-model="user.phone" placeholder="Celular">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputCity">Ciudad</label>
+                <input type="text" class="form-control" id="exampleInputCity" ng-model="user.city" placeholder="Ciudad">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputDistrict">Distrito</label>
+                <input type="text" class="form-control" id="exampleInputDistrict" ng-model="user.district" placeholder="Distrito">
+            </div>
+            <button class="btn btn-primary" ng-click="profile.edit(user)">Aceptar</button>
+        </form>
+        <form>
+            <h3>Cambiar contraseña</h3>
+            <div class="form-group">
+                <label for="exampleInputPassword">Nueva contraseña</label>
+                <input type="password" class="form-control" id="exampleInputPassword" ng-model="pass.new_pass" placeholder="Contraseña">
+            </div>
+            <!--div class="form-group">
+                <label for="exampleInputPasswordr">Repita contraseña</label>
+                <input type="password" class="form-control" id="exampleInputPasswordr" ng-model="pass.r_pass" placeholder="Repetir contraseña">
+            </div-->
+            <button class="btn btn-primary" ng-click="profile.password(pass)">Cambiar Contraseña</button>
+        </form>
+    </div>
+
+</div>

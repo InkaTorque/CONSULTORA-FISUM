@@ -1,0 +1,10 @@
+angular.module('applications').controller('ListappsCtrl',function($scope,$state,Application){
+    $scope.Applist={
+        apps:Application.find(),
+        detail:function(app){
+            $state.go("appdetail",{
+                id:app.id
+            });
+        }
+    }
+});

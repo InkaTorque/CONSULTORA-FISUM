@@ -1,0 +1,27 @@
+.fbappslist{
+    .fbapp{
+        cursor: pointer;
+        background: white;
+        padding: 10px;
+        border: solid 1px #f5f5f5;
+        border-radius: 9px;
+        display: inline-block;
+        width: 280px;
+        &.create{
+            background: #E7E7E7;
+            a{
+                text-decoration: none;
+                color: #8C8A8B;
+                span{
+                    margin: 10px;
+                }
+            }
+        }
+        span{
+            margin: 10px;
+        }
+      img{
+        width: 50px;
+      }
+    }
+}

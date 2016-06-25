@@ -1,0 +1,76 @@
+.dokinhistory {
+    .bubble {
+        position: relative;
+        height: 30px;
+        padding: 4px 8px;
+        background: whitesmoke;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+    }
+    .bubble:after {
+        content: '';
+        position: absolute;
+        border-style: solid;
+        border-width: 7px 7px 7px 0;
+        border-color: transparent whitesmoke;
+        display: block;
+        width: 0;
+        z-index: 1;
+        left: -7px;
+        top: 5px;
+    }
+    .more-chat {
+        position: fixed;
+        right: 0;
+        top: 144px;
+        bottom: 0;
+        background: white;
+        border-left: solid 1px whitesmoke;
+        .head {
+            .fa {
+                color: rgb(119, 119, 119);
+                margin: 4px;
+                cursor: pointer;
+            }
+        }
+        .btn-group-chat {
+            margin-top: 10px;
+            .btn {
+                width: 90px;
+                padding: 2px 8px;
+                color: white;
+                font-size: 12px;
+                border-color: rgb(92, 92, 92);
+                background: rgb(119, 119, 119);
+            }
+        }
+        .conversation {
+            padding: 10px 40px;
+            background: #fff;
+            overflow: scroll;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            left: 0;
+            .user {
+                color: grey;
+                border-bottom: dashed 1px;
+                text-transform: capitalize;
+                text-align: center;
+                font-size: 12px;
+                font-style: italic;
+                p {
+                    margin: 0;
+                    padding-bottom: 4px !important;
+                }
+
+            }
+            .conv {
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}

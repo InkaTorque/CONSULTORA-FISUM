@@ -1,0 +1,21 @@
+<div ng-controller="LoginCtrl">
+    <div class="log_cont" center>
+        <div class="lc_content">
+            <h2>Ingresar</h2>
+
+            <form name="f_login">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Correo electrónico</label>
+                    <input name="email" ng-class="{true: 'red_border'}[v_email]" type="email" class="form-control"
+                           id="exampleInputEmail1" ng-model="l_email" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Contraseña</label>
+                    <input name="password" ng-class="{true: 'red_border'}[v_password]" type="password"
+                           class="form-control" id="exampleInputPassword1" ng-model="l_password" placeholder="Password">
+                </div>
+            </form>
+            <button type="button" class="btn btn-primary" ng-click="login.log_in(f_login)">Login</button>
+        </div>
+    </div>
+</div>

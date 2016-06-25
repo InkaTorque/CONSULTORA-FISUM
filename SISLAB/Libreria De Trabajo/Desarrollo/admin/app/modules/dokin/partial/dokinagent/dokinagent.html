@@ -1,0 +1,43 @@
+<div class="ac_variable" ng-controller="DokinagentCtrl">
+    <div class="col-md-12 nopad dokinagent dokinagents dokin">
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Buscar">
+                        <a class="btn btn-default" href="#"
+                           ui-sref="dokin.agent.add"
+                           role="button">Agregar Agente</a>
+                    </div>
+                </form>
+            </div>
+            <!-- Table -->
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Display Name</th>
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
+                    <th>Email</th>
+                    <th>Admin</th>
+                    <th>Activo</th>
+                </tr>
+                </thead>
+            </table>
+            <!-- Table -->
+            <table class="table">
+                <tbody>
+                <tr ng-repeat="agent in Agent.list" ui-sref="dokin.agent.prof({id:agent.user.id})">
+                    <th>#{{agent.user.alias}}</th>
+                    <th>{{agent.user.firstName}}</th>
+                    <th>#{{agent.user.lastName}}</th>
+                    <th>#{{agent.user.email}}</th>
+                    <th>#{{agent.visits}}</th>
+                    <th>#{{agent.visits}}</th>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

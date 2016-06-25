@@ -1,0 +1,10 @@
+angular.module('dokin').controller('DokinagentaddCtrl',function($scope,User){
+    $scope.AddAgent={
+        add:function(user){
+            user.role="agent";
+            User.create(user,function(res){
+                console.log(res);
+            });
+        }
+    }
+});

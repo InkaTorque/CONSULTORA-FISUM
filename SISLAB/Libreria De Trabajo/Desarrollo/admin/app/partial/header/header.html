@@ -1,0 +1,25 @@
+<div ng-controller="HeaderCtrl">
+
+    <div class="header">
+        <div class="h_logo">
+            <a href=""><img src="assets/images/logo.png" alt=""/></a>
+        </div>
+        <div class="h_user_data">
+            <div class="hu_user">
+                <p>{{user_data.firstName}}</p>
+                <img ng-src="{{user_data.picture || 'assets/images/persona.png'}}" alt=""/>
+            </div>
+            <div class="hu_dropdown">
+                <span ng-click="header.drop_toggle()" class="glyphicon glyphicon-chevron-down"></span>
+                <div class="hud_content">
+                    <ul>
+                        <li>Inicio</li>
+                        <li><a href="/profile">Perfil</a></li>
+                        <li><a href="" ng-click="header.logout()">Cerrar Sesión</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

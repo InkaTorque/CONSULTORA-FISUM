@@ -1,0 +1,23 @@
+<div class="col-md-12" ng-controller="AppcreatorCtrl">
+    <form>
+        <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="string" class="form-control" id="name" ng-model="app.name" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+            <label for="description">Nombre</label>
+            <textarea name="" id="" cols="30" rows="10" class="form-control" id="description"
+                      ng-model="app.description"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="name">Email</label>
+            <input type="email" class="form-control" id="email" ng-model="app.email" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+            <label for="status">Status</label>
+            <input type="string" class="form-control" id="status" ng-model="app.status" ng-init="app.status='sandbox'"
+                   placeholder="Enter email">
+        </div>
+        <button type="submit" class="btn btn-default" ng-click="Apps.Create(app)">Submit</button>
+    </form>
+</div>

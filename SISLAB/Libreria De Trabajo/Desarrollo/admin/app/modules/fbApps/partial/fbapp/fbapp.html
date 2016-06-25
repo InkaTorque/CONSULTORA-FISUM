@@ -1,0 +1,15 @@
+<div class="col-md-12 appiframe" ng-controller="FbappCtrl">
+    <div class="col-md-9">
+        <iframe id="myiframe" ng-src='{{Fbapp.trustSrc(Fbapp.iframe)}}' frameborder="0"></iframe>
+    </div>
+    <div class="col-md-3">
+        <a href="" class="label label-success">App detalle:</a>
+        <pre>{{Fbapp.appshow}}</pre>
+        <br/>
+        <br/>
+        <a href="" class="btn btn-primary" ng-click="Fbapp.tab()">Configurar Tab</a>
+        <br/>
+        <br/>
+        <a href="" class="btn btn-danger" ng-click="Fbapp.deleteTab()">Eliminar</a>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+<div class="ac_variable" ng-controller="DokinanalyticsCtrl">
+    <div class="col-md-12">
+        <div class="btn-group btn-analytics" role="group">
+            <button type="button" class="btn btn-default" ng-click="Analitycs.changeChart('line')">Visitantes</button>
+            <button type="button" class="btn btn-default" ng-click="Analitycs.changeChart('hbar')">Horas/Dias Top</button>
+            <button type="button" class="btn btn-default" ng-click="Analitycs.changeChart('bar')">Chats</button>
+            <button type="button" class="btn btn-default" ng-click="Analitycs.changeChart('donut')">Agentes</button>
+            <button type="button" class="btn btn-default" ng-click="Analitycs.changeChart('map')">Ubicacion</button>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+
+        <div ng-show="Analitycs.active=='line'">
+            <div class="col-md-6">
+                <div id="line" style="width: 900px; height: 500px;"></div>
+                <br/>
+                <br/>
+                <div>
+                    <div class="filter-items">
+                        <div class="squaredFour">
+                            <input type="checkbox" value="None" id="squaredFour" name="check" checked/>
+                            <label for="squaredFour"></label>
+                        </div>
+                        Total de Visitas
+                    </div>
+                    <div class="filter-items">
+                        <div class="squaredFour">
+                            <input type="checkbox" value="None" id="squaredFour" name="check" checked/>
+                            <label for="squaredFour"></label>
+                        </div>
+                        Visitantes Únicos
+                    </div>
+                    <div class="filter-items">
+                        <div class="squaredFour">
+                            <input type="checkbox" value="None" id="squaredFour" name="check" checked/>
+                            <label for="squaredFour"></label>
+                        </div>
+                        Chats
+                    </div>
+                    <div class="filter-items">
+                        <div class="squaredFour">
+                            <input type="checkbox" value="None" id="squaredFour" name="check" checked/>
+                            <label for="squaredFour"></label>
+                        </div>
+                        Sesiones
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div id="piechart" style="width: 900px; height: 500px;"></div>
+            </div>
+        </div>
+        <div ng-show="Analitycs.active=='map'">
+            <div id="regions_div" style="width: 900px; height: 500px;"></div>
+        </div>
+        <div ng-show="Analitycs.active=='hbar'">
+            <div id="dual_x_div" style="width: 900px; height: 500px;"></div>
+        </div>
+        <div ng-show="Analitycs.active=='donut'">
+            <div id="donutchart" style="width: 900px; height: 500px;"></div>
+        </div>
+        <div ng-show="Analitycs.active=='bar'">
+            <div id="bar" style="width: 900px; height: 500px;"></div>
+        </div>
+    </div>
+</div>

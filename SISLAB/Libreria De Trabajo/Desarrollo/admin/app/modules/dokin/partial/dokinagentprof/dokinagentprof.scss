@@ -1,0 +1,26 @@
+.dokinagentprof {
+    .status {
+        border-bottom: solid 1px rgba(131, 133, 152, 0.59);
+        padding-bottom: 21px;
+        margin-bottom: 32px;
+    }
+    .back-arrow {
+        z-index: 10000;
+        margin-bottom: 25px;
+        .fa {
+            cursor: pointer;
+            padding: 5px 11px;
+            font-size: 20px;
+            width: 33px;
+            border-radius: 50px;
+            border: solid 1px #83EBF4;
+            margin-right: 10px;
+            background: #80D8FF;
+            color: white;
+            &:hover{
+                border: solid 1px #e9ebfa;
+                background: #97e6ff;
+            }
+        }
+    }
+}

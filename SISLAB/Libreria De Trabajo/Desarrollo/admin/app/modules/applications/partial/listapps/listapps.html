@@ -1,0 +1,7 @@
+<div class="col-md-12" ng-controller="ListappsCtrl">
+    <div>
+        <div class="app" ng-repeat="app in Applist.apps" ng-click="Applist.detail(app)">
+            <p>{{app.name}}</p>
+        </div>
+    </div>
+</div>

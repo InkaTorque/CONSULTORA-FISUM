@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html ng-app="admin">
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <base href="/"/>
+
+    <title>admin</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="vendor/dropzone/dist/min/dropzone.min.css" />
+    <link rel="stylesheet" href="vendor/angular-chart.js/dist/angular-chart.css" />
+    <link rel="stylesheet" href="vendor/sweetalert/dist/sweetalert.css" />
+    <link rel="stylesheet" href="vendor/angular-awesome-slider/dist/css/angular-awesome-slider.min.css" />
+    <link rel="stylesheet" href="vendor/angular-bootstrap-colorpicker/css/colorpicker.css" />
+    <link rel="stylesheet" href="vendor/codemirror/lib/codemirror.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/app.css -->
+    <script>
+        window.enviroment = "development";
+    </script>
+    <link rel="stylesheet" type="text/css" href="tmp/app.css"/>
+    <!-- endbuild -->
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<div class="wrapper" ng-controller="initializerCtrl">
+    <div class="log_page" ui-view="login"></div>
+    <div ui-view="header"></div>
+    <div ng-class="{true:'a_content'}[actualModule=='root']">
+        <div class="ac_panel" ui-view="panel"></div>
+        <div class="" ui-view></div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['geochart','line','bar','corechart']}]}"></script>
+
+<!-- build:js scripts/vendor.js -->
+<!-- bower:js -->
+<script src="vendor/jquery/dist/jquery.js"></script>
+<script src="vendor/underscore/underscore.js"></script>
+<script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
+<script src="vendor/angular/angular.js"></script>
+<script src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="vendor/angular-animate/angular-animate.js"></script>
+<script src="vendor/angular-resource/angular-resource.js"></script>
+<script src="vendor/angular-cookies/angular-cookies.js"></script>
+<script src="vendor/angular-mocks/angular-mocks.js"></script>
+<script src="vendor/angular-ui-utils/ui-utils.js"></script>
+<script src="vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="vendor/moment/moment.js"></script>
+<script src="vendor/dropzone/dist/min/dropzone.min.js"></script>
+<script src="vendor/ng-file-upload/angular-file-upload.js"></script>
+<script src="vendor/socket.io-client/socket.io.js"></script>
+<script src="vendor/Chart.js/Chart.js"></script>
+<script src="vendor/angular-chart.js/dist/angular-chart.js"></script>
+<script src="vendor/sweetalert/dist/sweetalert.min.js"></script>
+<script src="vendor/angular-h-sweetalert/dist/ngSweetAlert.js"></script>
+<script src="vendor/angular-h-sweetalert/dist/ngSweetAlert.min.js"></script>
+<script src="vendor/angular-awesome-slider/dist/angular-awesome-slider.min.js"></script>
+<script src="vendor/angular-bootstrap-colorpicker/js/bootstrap-colorpicker-module.js"></script>
+<script src="vendor/codemirror/lib/codemirror.js"></script>
+<script src="vendor/codemirror/mode/javascript/javascript.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js scripts/app.js -->
+<!-- Main App JS -->
+<script src="app.js"></script>
+<script src="modules/lbServices/lbServices.js"></script>
+<script src="partial/login/login.js"></script>
+<script src="partial/header/header.js"></script>
+<script src="partial/panel/panel.js"></script>
+<script src="partial/profile/profile.js"></script>
+<script src="modules/applications/applications.js"></script>
+<script src="modules/applications/partial/listapps/listapps.js"></script>
+<script src="modules/applications/partial/appcreator/appcreator.js"></script>
+<script src="modules/applications/partial/appdetail/appdetail.js"></script>
+<script src="modules/fbApps/fbApps.js"></script>
+<script src="modules/fbApps/partial/fbcreator/fbcreator.js"></script>
+<script src="modules/fbApps/partial/fbapp/fbapp.js"></script>
+<script src="partial/user/user.js"></script>
+<script src="partial/user-detail/user-detail.js"></script>
+<script src="modules/fbApps/partial/fbapplist/fbapplist.js"></script>
+<script src="modules/fbApps/modals/deleteFbapp/deleteFbapp.js"></script>
+<script src="modules/dokin/dokin.js"></script>
+<script src="modules/dokin/partial/dokinpanel/dokinpanel.js"></script>
+<script src="modules/dokin/partial/dokinheader/dokinheader.js"></script>
+<script src="modules/dokin/partial/dokinvisitor/dokinvisitor.js"></script>
+<script src="modules/dokin/service/socket.js"></script>
+<script src="modules/dokin/partial/dokinhome/dokinhome.js"></script>
+<script src="modules/dokin/service/proxysocket.js"></script>
+<script src="modules/dokin/partial/landing/landing.js"></script>
+<script src="modules/dokin/partial/dokinsignin/dokinsignin.js"></script>
+<script src="modules/dokin/partial/dokinsignup/dokinsignup.js"></script>
+<script src="modules/dokin/partial/dokinagent/dokinagent.js"></script>
+<script src="modules/dokin/partial/dokinagentadd/dokinagentadd.js"></script>
+<script src="modules/dokin/partial/dokinhistory/dokinhistory.js"></script>
+<script src="modules/dokin/modals/chatmodal/chatmodal.js"></script>
+<script src="modules/dokin/partial/dokinsub/dokinsub.js"></script>
+<script src="modules/dokin/service/parent.js"></script>
+<script src="modules/dokin/partial/dokinwidget/dokinwidget.js"></script>
+<script src="modules/dokin/partial/dokinagentprof/dokinagentprof.js"></script>
+<script src="modules/dokin/partial/dokinanalytics/dokinanalytics.js"></script>
+<script src="modules/dokin/partial/dokinaccount/dokinaccount.js"></script>
+<script src="modules/dokin/partial/dokinbenefits/dokinbenefits.js"></script>
+<script src="modules/dokin/service/minimizeChat.js"></script>
+<script src="modules/dokin/modals/closeminChat/closeminChat.js"></script>
+<script src="modules/kourier/kourier.js"></script>
+<script src="modules/kourier/partial/kourierhome/kourierhome.js"></script>
+<script src="modules/kourier/partial/kourierpanel/kourierpanel.js"></script>
+<script src="modules/kourier/partial/kouriermlist/kouriermlist.js"></script>
+<script src="modules/kourier/partial/kourierreport/kourierreport.js"></script>
+<script src="modules/kourier/partial/kouriercampaign/kouriercampaign.js"></script>
+<script src="modules/dokin/service/fscriptService.js"></script>
+<script src="modules/dokin/service/ioServ.js"></script>
+<!-- Add New Component JS Above -->
+<!-- endbuild -->
+
+</body>
+</html>

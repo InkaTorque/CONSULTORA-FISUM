@@ -1,0 +1,25 @@
+<div class="col-md-12 dokin-signin" ng-controller="DokinsigninCtrl">
+    <div class="wrapper">
+        <form class="form-signin" novalidate="" name="form">
+            <h2 class="form-signin-heading">Ingresar</h2>
+            <input type="email" class="form-control" name="email" placeholder="Ingrese su correo" ng-model="user.email" required autofocus="" />
+            <div ng-show="form.$submitted" class="alert-error">
+                <span ng-show="form.email.$error.required">Escriba su correo por favor.</span>
+                <span ng-show="form.email.$error.email">El email ingresado no es correcto.</span>
+            </div>
+            <input type="password" class="form-control" name="password" placeholder="Ingrese su contraseña" ng-model="user.password" required/>
+            <div ng-show="form.$submitted" class="alert-error">
+                <span ng-show="form.password.$error.required">Escriba su contraseña.</span>
+            </div>
+            <div class="" ng-if="error">
+                <span class="alert-error">
+                {{error.message}}
+              </span>
+            </div>
+            <!-- <label class="checkbox">
+                <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+            </label> -->
+            <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="SignIn.signIn(user,form)">Login</button>
+        </form>
+    </div>
+</div>

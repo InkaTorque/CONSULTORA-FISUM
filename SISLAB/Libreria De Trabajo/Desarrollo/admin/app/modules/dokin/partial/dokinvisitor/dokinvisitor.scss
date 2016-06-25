@@ -1,0 +1,79 @@
+.nopad{
+    padding: 0 !important;
+}
+.dokinvisitor{
+    .panel{
+        border-radius: 0;
+    }
+    .panel > .table > tbody:first-child > tr:first-child th, .panel > .table > tbody:first-child > tr:first-child td{
+        border-top: 1px solid #ddd;
+    }
+    table{
+        thead{
+            background: #f5f5f5;
+            tr{
+                th{
+                    border-bottom: solid 1px #ddd !important;
+                    width: 250px;
+                }
+            }
+        }
+        tbody{
+            color: #808080;
+            tr{
+                th{
+                    width: 250px;
+                }
+                cursor: pointer;
+            }
+        }
+    }
+    .form-inline{
+        input{
+            border-radius: 15px;
+        }
+    }
+    .filter{
+        margin: 20px 0;
+        color: #808080;
+        .fa{
+            font-size: 18px;
+            padding: 10px;
+            background: rgb(77, 194, 77);
+            height: 32px;
+            color: white;
+            margin-left: 10px;
+            border-radius: 50%;
+        }
+        span{
+            margin-right: 5px;
+        }
+    }
+    .minimized-chat{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        .chat{
+            background: #565656;
+            color: white;
+            padding: 5px;
+            margin: 0 5px;
+            cursor: pointer;
+            width: 200px;
+            display: inline-block;
+            position: relative;
+            .fa{
+                position: absolute;
+                z-index: 10;
+                top: 2px;
+                right: 8px;
+                width: 26px;
+                color: rgb(96, 169, 202);
+                text-align: center;
+                padding: 6px;
+                background: whitesmoke;
+                border-radius: 50px;
+            }
+        }
+    }
+}
